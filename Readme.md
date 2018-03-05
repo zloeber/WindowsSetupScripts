@@ -7,12 +7,14 @@ Download this github project and extract to any directory and run via powershell
 
 ## Features
 
-- Ability to tweak several dozen Windows settings (privacy, )
+- Ability to tweak several dozen Windows settings (privacy, taskbar, explorer, et cetera..)
 - Can install chocolatey based applications
 - Can install GitReleases based applications
 - Can find and install recent versions of Hashicorp applications
 - Can download and kick off installation of custom intallations based on URL
 - Can run windows updates (based on boxstarter)
+- Can install vscode plugins
+- Can setup a custom PowerShell profile
 - Is largely idempotent
 - Can be stored as a gist and launched via boxstarter
 
