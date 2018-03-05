@@ -28,9 +28,9 @@ There are a handful of scripts make up this mini-project. One script can be used
 
 *Configure-Windows.ps1* - Post intall Windows configuration script. This is meant to be run manually and can be used in conjunction with a config.json file (that this script can also create). To create a boxstarter version of this script use the create-windows-config.ps1 script with this project instead.
 
-*Install-Extras.ps1* - Installs additional software not found in chocolatey (or that may be preferred to be installed directly from a web source). Also used to setup different application settings, a powershell profile, and install PowerShell modules. This is meant to be heavily customized to suit your needs and run manually after running your configuration scripts. It would not be hard to move a good deal of this to a boxstarter script as well.
+*Install-Extras.ps1* - Installs additional software from chocolatey and other sources. Also used to setup different application settings, a powershell profile, and install PowerShell modules. This is meant to be heavily customized to suit your needs and run manually after running your configuration scripts. It would not be hard to move a good deal of this to a boxstarter script as well.
 
-*Show-Config.ps1* - Use this to view all the settings in a saved config.json file in a nice readable format.
+*Show-Config.ps1* - Use this to view all the settings in a saved config.json file in a nice readable format. This compliments the Configure-Windows.ps1 script.
 
 ## Other Information
 
