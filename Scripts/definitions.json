@@ -1,0 +1,1085 @@
+[
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable Windows telementry services (disabling MAY break Windows updates!)",
+        "Name": "Telemetry",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableTelemetry",
+            "\u0026EnableTelemetry"
+        ]
+    },
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable Windows WiFi sense (Wifi sharing)",
+        "Name": "WiFi Sense",
+        "Choices": [
+            "\u0026DisableWiFiSense",
+            "\u0026EnableWiFiSense"
+        ]
+    },
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable SmartScreen security in IE",
+        "Name": "SmartScreen",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableSmartScreen",
+            "\u0026EnableSmartScreen"
+        ]
+    },
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable bing web search in start menu results",
+        "Name": "WebSearch",
+        "Choices": [
+            "\u0026DisableWebSearch",
+            "\u0026EnableWebSearch"
+        ]
+    },
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable application suggestions in start menu",
+        "Name": "AppSuggestions",
+        "Choices": [
+            "\u0026DisableAppSuggestions",
+            "\u0026EnableAppSuggestions"
+        ]
+    },
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable background app installation",
+        "Name": "BackgroundApps",
+        "Choices": [
+            "\u0026DisableBackgroundApps",
+            "\u0026EnableBackgroundApps"
+        ]
+    },
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable lock screen spotlight",
+        "Name": "LockScreenSpotlight",
+        "Choices": [
+            "\u0026DisableLockScreenSpotlight",
+            "\u0026EnableLockScreenSpotlight"
+        ]
+    },
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable GPS location tracking",
+        "Name": "LocationTracking",
+        "Choices": [
+            "\u0026DisableLocationTracking",
+            "\u0026EnableLocationTracking"
+        ]
+    },
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable map updates",
+        "Name": "MapUpdates",
+        "Choices": [
+            "\u0026DisableMapUpdates",
+            "\u0026EnableMapUpdates"
+        ]
+    },
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable feedback",
+        "Name": "Feedback",
+        "Choices": [
+            "\u0026DisableFeedback",
+            "\u0026EnableFeedback"
+        ]
+    },
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable advertising ID tracking",
+        "Name": "AdvertisingID",
+        "Choices": [
+            "\u0026DisableAdvertisingID",
+            "\u0026EnableAdvertisingID"
+        ]
+    },
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable Cortana voice recognition",
+        "Name": "Cortana",
+        "Choices": [
+            "\u0026DisableCortana",
+            "\u0026EnableCortana"
+        ]
+    },
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable error reporting uploads",
+        "Name": "ErrorReporting",
+        "Choices": [
+            "\u0026DisableErrorReporting",
+            "\u0026EnableErrorReporting"
+        ]
+    },
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable peer to peer update sharing",
+        "Name": "P2PUpdate",
+        "Choices": [
+            "SetP2PUpdate\u0026Local",
+            "SetP2PUpdate\u0026Internet"
+        ]
+    },
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable automatic logger",
+        "Name": "AutoLogger",
+        "Choices": [
+            "\u0026DisableAutoLogger",
+            "\u0026EnableAutoLogger"
+        ]
+    },
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable diagnostics tracking",
+        "Name": "DiagTrack",
+        "Choices": [
+            "\u0026DisableDiagTrack",
+            "\u0026EnableDiagTrack"
+        ]
+    },
+    {
+        "Group": "Privacy",
+        "Description": "Disable or enable WAP push service",
+        "Name": "WAPPush",
+        "Choices": [
+            "\u0026DisableWAPPush",
+            "\u0026EnableWAPPush"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Set the UAC level",
+        "Name": "UACLevel",
+        "Choices": [
+            "\u0026Skip",
+            "SetUAC\u0026Low",
+            "SetUAC\u0026High"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Disable or enable sharing of mapped drives",
+        "Name": "SharingMappedDrives",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableSharingMappedDrives",
+            "\u0026EnableSharingMappedDrives"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Disable or enable admin shares",
+        "Name": "AdminShares",
+        "Choices": [
+            "\u0026DisableAdminShares",
+            "\u0026EnableAdminShares"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Disable or enable SMB1 protocol",
+        "Name": "SMB1",
+        "Choices": [
+            "\u0026DisableSMB1",
+            "\u0026EnableSMB1"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Set the current network zone as public or private",
+        "Name": "CurrentNetworkZone",
+        "Choices": [
+            "\u0026Skip",
+            "SetCurrentNetworkP\u0026rivate",
+            "SetCurrentNetworkP\u0026ublic"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Set unknown network zone as public or private",
+        "Name": "UnknownNetworkZone",
+        "Choices": [
+            "\u0026Skip",
+            "SetUnknownNetworkP\u0026rivate",
+            "SetUnknownNetworkP\u0026ublic"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Disable or enable unknown network device auto-installation",
+        "Name": "NetDevicesAutoInst",
+        "Choices": [
+            "\u0026DisableNetDevicesAutoInst",
+            "\u0026EnableNetDevicesAutoInst"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Disable or enable controlled folder access (WARNING: Enabling can cause issues with Powershell profile path access!)",
+        "Name": "ControlledFolderAccess",
+        "Choices": [
+            "\u0026EnableCtrldFolderAccess",
+            "\u0026DisableCtrldFolderAccess"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Disable or enable firewall service",
+        "Name": "Firewall",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableFirewall",
+            "\u0026EnableFirewall"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Disable or enable defender service",
+        "Name": "Defender",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableDefender",
+            "\u0026EnableDefender"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Disable or enable defender cloud service",
+        "Name": "DefenderCloud",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableDefenderCloud",
+            "\u0026EnableDefenderCloud"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Disable or enable Malicious Software Removal Tool offering",
+        "Name": "UpdateMSRT",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableUpdateMSRT",
+            "\u0026EnableUpdateMSRT"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Disable or enable updating of drivers",
+        "Name": "UpdateDriver",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableUpdateDriver",
+            "\u0026EnableUpdateDriver"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Disable or enable automatic update and restart",
+        "Name": "UpdateRestart",
+        "Choices": [
+            "\u0026DisableUpdateRestart",
+            "\u0026EnableUpdateRestart"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Disable or enable prompt to schedule update and restart",
+        "Name": "UpdateScheduleRestart",
+        "Choices": [
+            "\u0026EnableUpdateScheduleRestart",
+            "\u0026DisableUpdateScheduleRestart"
+        ]
+    },
+    {
+        "Group": "Service - Other",
+        "Description": "Disable or enable HomeGroup service",
+        "Name": "HomeGroups",
+        "Choices": [
+            "\u0026DisableHomeGroups",
+            "\u0026EnableHomeGroups"
+        ]
+    },
+    {
+        "Group": "Service - Other",
+        "Description": "Disable or enable shared experiences",
+        "Name": "SharedExperiences",
+        "Choices": [
+            "\u0026DisableSharedExperiences",
+            "\u0026EnableSharedExperiences"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Disable or enable remote assistance service",
+        "Name": "RemoteAssistance",
+        "Choices": [
+            "\u0026DisableRemoteAssistance",
+            "\u0026EnableRemoteAssistance"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Disable or enable remote desktop service",
+        "Name": "RemoteDesktop",
+        "Choices": [
+            "\u0026DisableRemoteDesktop",
+            "\u0026EnableRemoteDesktop"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Disable or enable autoplay",
+        "Name": "Autoplay",
+        "Choices": [
+            "\u0026DisableAutoplay",
+            "\u0026EnableAutoplay"
+        ]
+    },
+    {
+        "Group": "Security",
+        "Description": "Disable or enable autorun for all drives",
+        "Name": "Autorun",
+        "Choices": [
+            "\u0026DisableAutorun",
+            "\u0026EnableAutorun"
+        ]
+    },
+    {
+        "Group": "Service - Other",
+        "Description": "Disable or enable storage sense service",
+        "Name": "StorageSense",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableStorageSense",
+            "\u0026EnableStorageSense"
+        ]
+    },
+    {
+        "Group": "Service - Other",
+        "Description": "Disable or enable defragmentation service",
+        "Name": "Defragmentation",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableDefragmentation",
+            "\u0026EnableDefragmentation"
+        ]
+    },
+    {
+        "Group": "Service - Other",
+        "Description": "Disable or enable superfetch service",
+        "Name": "Superfetch",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableSuperfetch",
+            "\u0026EnableSuperfetch"
+        ]
+    },
+    {
+        "Group": "Service - Other",
+        "Description": "Disable or enable indexing service",
+        "Name": "Indexing",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableIndexing",
+            "\u0026EnableIndexing"
+        ]
+    },
+    {
+        "Group": "Service - Other",
+        "Description": "Set BIOS time setting",
+        "Name": "BIOSTime",
+        "Choices": [
+            "\u0026Skip",
+            "SetBIOSTime\u0026UTC",
+            "SetBIOSTime\u0026Local"
+        ]
+    },
+    {
+        "Group": "Service - Power",
+        "Description": "Disable or enable hibernation",
+        "Name": "Hibernation",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableHibernation",
+            "\u0026EnableHibernation"
+        ]
+    },
+    {
+        "Group": "Service - Power",
+        "Description": "Disable or enable sleep button",
+        "Name": "SleepButton",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableSleepButton",
+            "\u0026EnableSleepButton"
+        ]
+    },
+    {
+        "Group": "Service - Power",
+        "Description": "Disable or enable sleep timeout",
+        "Name": "SleepTimeout",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableSleepTimeout",
+            "\u0026EnableSleepTimeout"
+        ]
+    },
+    {
+        "Group": "Service - Power",
+        "Description": "Disable or enable fast startup",
+        "Name": "FastStartup",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableFastStartup",
+            "\u0026EnableFastStartup"
+        ]
+    },
+    {
+        "Group": "User Interface - Other",
+        "Description": "Disable or enable action center",
+        "Name": "ActionCenter",
+        "Choices": [
+            "\u0026DisableActionCenter",
+            "\u0026EnableActionCenter"
+        ]
+    },
+    {
+        "Group": "User Interface - Lock Screen",
+        "Description": "Disable or enable lock screen",
+        "Name": "LockScreen",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableLockScreen",
+            "\u0026EnableLockScreen"
+        ]
+    },
+    {
+        "Group": "User Interface - Lock Screen",
+        "Description": "Hide or show network from lock screen",
+        "Name": "HideNetworkFromLockScreen",
+        "Choices": [
+            "\u0026HideNetworkFromLockScreen",
+            "Show\u0026NetworkOnLockScreen"
+        ]
+    },
+    {
+        "Group": "User Interface - Lock Screen",
+        "Description": "Hide or show shutdown from lock screen",
+        "Name": "HideShutdownFromLockScreen",
+        "Choices": [
+            "\u0026HideShutdownFromLockScreen",
+            "S\u0026howShutdownOnLockScreen"
+        ]
+    },
+    {
+        "Group": "User Interface - Other",
+        "Description": "Disable or enable sticky keys",
+        "Name": "StickyKeys",
+        "Choices": [
+            "\u0026DisableStickyKeys",
+            "\u0026EnableStickyKeys"
+        ]
+    },
+    {
+        "Group": "User Interface - Other",
+        "Description": "Hide or show task manager details",
+        "Name": "TaskManagerDetails",
+        "Choices": [
+            "Show\u0026TaskManagerDetails",
+            "\u0026HideTaskManagerDetails"
+        ]
+    },
+    {
+        "Group": "User Interface - Other",
+        "Description": "Hide or show file operations details",
+        "Name": "ShowFileOperationsDetails",
+        "Choices": [
+            "Show\u0026FileOperationsDetails",
+            "\u0026HideFileOperationsDetails"
+        ]
+    },
+    {
+        "Group": "User Interface - Other",
+        "Description": "Disable or enable confirm file deletion",
+        "Name": "FileDeleteConfirm",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableFileDeleteConfirm",
+            "\u0026EnableFileDeleteConfirm"
+        ]
+    },
+    {
+        "Group": "User Interface - Taskbar",
+        "Description": "Taskbar Search Box Visibility",
+        "Name": "TaskbarSearchBox",
+        "Choices": [
+            "\u0026HideTaskbarSearchBox",
+            "Show\u0026TaskbarSearchBox"
+        ]
+    },
+    {
+        "Group": "User Interface - Taskbar",
+        "Description": "Show or hide task view",
+        "Name": "TaskView",
+        "Choices": [
+            "\u0026HideTaskView",
+            "Show\u0026TaskView"
+        ]
+    },
+    {
+        "Group": "User Interface - Taskbar",
+        "Description": "Set Taskbar icon size",
+        "Name": "TaskbarIcon",
+        "Choices": [
+            "\u0026Skip",
+            "ShowS\u0026mallTaskbarIcons",
+            "Show\u0026LargeTaskbarIcons"
+        ]
+    },
+    {
+        "Group": "User Interface - Taskbar",
+        "Description": "Taskbar docking location",
+        "Name": "TaskbarDocking",
+        "Choices": [
+            "\u0026Skip",
+            "DockTaskBar\u0026Left",
+            "DockTaskBar\u0026Right",
+            "DockTaskBar\u0026Top",
+            "DockTaskBar\u0026Bottom"
+        ]
+    },
+    {
+        "Group": "User Interface - Taskbar",
+        "Description": "Hide or show taskbar titles",
+        "Name": "TaskbarTitles",
+        "Choices": [
+            "Show\u0026TaskbarTitles",
+            "\u0026HideTaskbarTitles"
+        ]
+    },
+    {
+        "Group": "User Interface - Taskbar",
+        "Description": "Hide or show people icon in taskbar",
+        "Name": "TaskbarPeopleIcon",
+        "Choices": [
+            "\u0026HideTaskbarPeopleIcon",
+            "Show\u0026TaskbarPeopleIcon"
+        ]
+    },
+    {
+        "Group": "User Interface - Taskbar",
+        "Description": "Hide or show Tray icon in taskbar",
+        "Name": "TrayIcons",
+        "Choices": [
+            "Show\u0026TrayIcons",
+            "\u0026HideTrayIcons"
+        ]
+    },
+    {
+        "Group": "User Interface - Taskbar",
+        "Description": "Enable or disable taskbar autohiding",
+        "Name": "TaskbarAutoHide",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026EnableAutoHideTaskbar",
+            "\u0026DisableAutoHideTaskbar"
+        ]
+    },
+    {
+        "Group": "User Interface - Explorer",
+        "Description": "Hide or show known extensions in Explorer",
+        "Name": "KnownExtensions",
+        "Choices": [
+            "Show\u0026KnownExtensions",
+            "\u0026HideKnownExtensions"
+        ]
+    },
+    {
+        "Group": "User Interface - Explorer",
+        "Description": "Hide or show hidden files in Explorer",
+        "Name": "HiddenFiles",
+        "Choices": [
+            "Sh\u0026owHiddenFiles",
+            "\u0026HideHiddenFiles"
+        ]
+    },
+    {
+        "Group": "User Interface - System Tray",
+        "Description": "Hide or show Sync notifications in system tray",
+        "Name": "SyncNotifications",
+        "Choices": [
+            "\u0026HideSyncNotifications",
+            "ShowS\u0026yncNotifications"
+        ]
+    },
+    {
+        "Group": "User Interface - Start Menu",
+        "Description": "Hide or show Recent Shortcuts in start menu",
+        "Name": "RecentShortcuts",
+        "Choices": [
+            "\u0026HideRecentShortcuts",
+            "Show\u0026RecentShortcuts"
+        ]
+    },
+    {
+        "Group": "User Interface - Explorer",
+        "Description": "Set default Explorer view to This PC or Quick Access",
+        "Name": "ExplorerDefaultView",
+        "Choices": [
+            "SetExplorer\u0026ThisPC",
+            "SetExplorer\u0026QuickAccess"
+        ]
+    },
+    {
+        "Group": "User Interface - Desktop",
+        "Description": "Hide or show This PC on desktop",
+        "Name": "ThisPCOnDesktop",
+        "Choices": [
+            "Show\u0026ThisPCOnDesktop",
+            "\u0026HideThisPCOnDesktop"
+        ]
+    },
+    {
+        "Group": "User Interface - Desktop",
+        "Description": "Hide or show User folder on desktop",
+        "Name": "UserFolderOnDesktop",
+        "Choices": [
+            "\u0026Skip",
+            "Show\u0026UserFolderOnDesktop",
+            "\u0026HideUserFolderOnDesktop"
+        ]
+    },
+    {
+        "Group": "User Interface - This PC",
+        "Description": "Hide or show Desktop icon on This PC",
+        "Name": "HideDesktopFromThisPC",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026HideDesktopFromThisPC",
+            "Show\u0026DesktopInThisPC"
+        ]
+    },
+    {
+        "Group": "User Interface - This PC",
+        "Description": "Hide or show documents folder on This PC",
+        "Name": "DocumentsFromThisPC",
+        "Choices": [
+            "\u0026Skip",
+            "H\u0026ideDocumentsFromThisPC",
+            "S\u0026howDocumentsFromThisPC"
+        ]
+    },
+    {
+        "Group": "User Interface - Explorer",
+        "Description": "Hide or show Documents folder from Explorer",
+        "Name": "DocumentsFromExplorer",
+        "Choices": [
+            "H\u0026ideDocumentsFromExplorer",
+            "Sh\u0026owDocumentsFromExplorer"
+        ]
+    },
+    {
+        "Group": "User Interface - This PC",
+        "Description": "Hid or show Downloads folder from This PC",
+        "Name": "DownloadsFromThisPC",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026HideDownloadsFromThisPC",
+            "Sh\u0026owDownloadsFromThisPC"
+        ]
+    },
+    {
+        "Group": "User Interface - Explorer",
+        "Description": "Hide or show Downloads folder in Explorer",
+        "Name": "DownloadsFolderInExplorer",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026HideDownloadsFromExplorer",
+            "Sh\u0026owDownloadsInExplorer"
+        ]
+    },
+    {
+        "Group": "User Interface",
+        "Description": "Hide or show Music folder in This PC",
+        "Name": "MusicFolderInThisPC",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026HideMusicFromThisPC",
+            "Sh\u0026owMusicInThisPC"
+        ]
+    },
+    {
+        "Group": "User Interface - Explorer",
+        "Description": "Hide or show Music folder in Explorer",
+        "Name": "MusicFolderInExplorer",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026HideMusicFromExplorer",
+            "Sh\u0026owMusicInExplorer"
+        ]
+    },
+    {
+        "Group": "User Interface - This PC",
+        "Description": "Hide or show Pictures folder in This PC",
+        "Name": "PicturesFolderInThisPC",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026HidePicturesFromThisPC",
+            "Sh\u0026owPicturesInThisPC"
+        ]
+    },
+    {
+        "Group": "User Interface - Explorer",
+        "Description": "Hide or show Pictures folder in Explorer",
+        "Name": "PicturesFolderInExplorer",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026HidePicturesFromExplorer",
+            "Sh\u0026owPicturesInExplorer"
+        ]
+    },
+    {
+        "Group": "User Interface - This PC",
+        "Description": "Hide or show Videos folder in This PC",
+        "Name": "VideoFoldersThisPC",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026HideVideosFromThisPC",
+            "Sh\u0026owVideosInThisPC"
+        ]
+    },
+    {
+        "Group": "User Interface - Explorer",
+        "Description": "Hide or show Videos folder in Explorer",
+        "Name": "VideosFolderInExplorer",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026HideVideosFromExplorer",
+            "Sh\u0026owVideosInExplorer"
+        ]
+    },
+    {
+        "Group": "User Interface - This PC",
+        "Description": "Hide or show 3D Objects folder in This PC",
+        "Name": "3DObjectsThisPC",
+        "Choices": [
+            "\u0026Hide3DObjectsFromThisPC",
+            "Sh\u0026ow3DObjectsInThisPC"
+        ]
+    },
+    {
+        "Group": "User Interface - Explorer",
+        "Description": "Hide or show 3D Objects folder in Explorer",
+        "Name": "3DObjectsExplorer",
+        "Choices": [
+            "\u0026Hide3DObjectsFromExplorer",
+            "Sh\u0026ow3DObjectsInExplorer"
+        ]
+    },
+    {
+        "Group": "User Interface - Other",
+        "Description": "Set control panel display as Icon or Category mode",
+        "Name": "ControlPanelView",
+        "Choices": [
+            "SetControlPanelView\u0026Icons",
+            "SetControlPanelView\u0026Categories"
+        ]
+    },
+    {
+        "Group": "User Interface - Other",
+        "Description": "Set visual effects for fastest performance or best appearance",
+        "Name": "FXType",
+        "Choices": [
+            "SetVisualFX\u0026Performance",
+            "SetVisualFX\u0026Appearance"
+        ]
+    },
+    {
+        "Group": "User Interface - Other",
+        "Description": "Disable or enable Thumbnail generation",
+        "Name": "Thumbnails",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableThumbnails",
+            "\u0026EnableThumbnails"
+        ]
+    },
+    {
+        "Group": "User Interface - Other",
+        "Description": "Disable or enable thumbnail database file creation",
+        "Name": "ThumbnailDB",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableThumbsDB",
+            "\u0026EnableThumbsDB"
+        ]
+    },
+    {
+        "Group": "User Interface - System Tray",
+        "Description": "Add or remove EN Keyboard icon in system tray",
+        "Name": "ENKeyboard",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026AddENKeyboard",
+            "\u0026RemoveENKeyboard"
+        ]
+    },
+    {
+        "Group": "User Interface - Other",
+        "Description": "Disable or enable Numlock",
+        "Name": "Numlock",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableNumlock",
+            "\u0026EnableNumlock"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Disable or enable OneDrive",
+        "Name": "OneDriveService",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableOneDrive",
+            "\u0026EnableOneDrive"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Uninstall or install OneDrive",
+        "Name": "OneDriveInstall",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026UninstallOneDrive",
+            "\u0026InstallOneDrive"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Install or uninstall Microsoft default AppX packages",
+        "Name": "MsftBloat",
+        "Choices": [
+            "\u0026UninstallMsftBloat",
+            "\u0026InstallMsftBloat"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Uninstall or install third party default AppX packages.",
+        "Name": "ThirdPartyBloat",
+        "Choices": [
+            "\u0026UninstallThirdPartyBloat",
+            "\u0026InstallThirdPartyBloat"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Uninstall or install the windows store application",
+        "Name": "WindowsStore",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026UninstallWindowsStore",
+            "\u0026InstallWindowsStore"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Uninstall or install Xbox features",
+        "Name": "XboxFeatures",
+        "Choices": [
+            "\u0026DisableXboxFeatures",
+            "\u0026EnableXboxFeatures"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Disable or enable built-in Adobe Flash in IE and Edge",
+        "Name": "AdobeFlash",
+        "Choices": [
+            "\u0026DisableAdobeFlash",
+            "\u0026EnableAdobeFlash"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Uninstall or install media player",
+        "Name": "MediaPlayer",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026UninstallMediaPlayer",
+            "\u0026InstallMediaPlayer"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Uninstall or install work folder client",
+        "Name": "WorkFolders",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026UninstallWorkFolders",
+            "\u0026InstallWorkFolders"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Uninstall or install HyperV",
+        "Name": "HyperV",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026InstallHyperV",
+            "\u0026UninstallHyperV"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Set or unset Photo Viewer association",
+        "Name": "PhotoViewerAssociation",
+        "Choices": [
+            "Set\u0026PhotoViewerAssociation",
+            "\u0026UnSetPhotoViewerAssociation"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Add or remove Photo Viewer to 'Open with'",
+        "Name": "PhotoViewerOpenWith",
+        "Choices": [
+            "\u0026AddPhotoViewerOpenWith",
+            "\u0026RemovePhotoViewerOpenWith"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Disable or enable searching for app in store for unknown extensions",
+        "Name": "SearchAppInStore",
+        "Choices": [
+            "\u0026DisableSearchAppInStore",
+            "\u0026EnableSearchAppInStore"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Disable or enable 'How do you want to open this file?' prompt",
+        "Name": "NewAppPrompt",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableNewAppPrompt",
+            "\u0026EnableNewAppPrompt"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Disable or enable F8 boot menu",
+        "Name": "F8BootMenu",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableF8BootMenu",
+            "\u0026EnableF8BootMenu"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Set Data Execution Prevention (DEP) policy to Opt out or in",
+        "Name": "DEP",
+        "Choices": [
+            "\u0026Skip",
+            "SetDEPOpt\u0026Out",
+            "SetDEPOpt\u0026In"
+        ]
+    },
+    {
+        "Group": "Application",
+        "Description": "Disable or enable Meltdown (CVE-2017-5754) compatibility flag - Required for January 2018 and all subsequent Windows updates. This flag is normally automatically enabled by compatible antivirus software (such as Windows Defender). Use the tweak only if you have confirmed that your AV is compatible but unable to set the flag automatically or if you don\u0027t use any AV at all. See https://support.microsoft.com/en-us/help/4072699/january-3-2018-windows-security-updates-and-antivirus-software for details.",
+        "Name": "MeltdownCompatFlag",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableMeltdownCompatFlag",
+            "\u0026EnableMeltdownCompatFlag"
+        ]
+    },
+    {
+        "Group": "Server",
+        "Description": "Disable or enable Hide Server Manager On Login",
+        "Name": "HideServerManagerOnLogin",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026HideServerManagerOnLogin",
+            "Sh\u0026owServerManagerOnLogin"
+        ]
+    },
+    {
+        "Group": "Server",
+        "Description": "Disable or enable Shutdown Tracker dialog box",
+        "Name": "ShutdownTracker",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableShutdownTracker",
+            "\u0026EnableShutdownTracker"
+        ]
+    },
+    {
+        "Group": "Server",
+        "Description": "Disable or enable Password Policy",
+        "Name": "PasswordPolicy",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisablePasswordPolicy",
+            "\u0026EnablePasswordPolicy"
+        ]
+    },
+    {
+        "Group": "Server",
+        "Description": "Disable or enable Ctrl-Alt-Del Login",
+        "Name": "CtrlAltDelLogin",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableCtrlAltDelLogin",
+            "\u0026EnableCtrlAltDelLogin"
+        ]
+    },
+    {
+        "Group": "Server",
+        "Description": "Disable or enable IE Enhanced Security",
+        "Name": "IEEnhancedSecurity",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026DisableIEEnhancedSecurity",
+            "\u0026EnableIEEnhancedSecurity"
+        ]
+    },
+    {
+        "Group": "Unpinning",
+        "Description": "Unpin start menu tiles (WARNING: One way operation!)",
+        "Name": "UnpinStartMenuTiles",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026UnpinStartMenuTiles"
+        ]
+    },
+    {
+        "Group": "Unpinning",
+        "Description": "Unpin taskbar icons (WARNING: One way operation!)",
+        "Name": "UnpinTaskbarIcons",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026UnpinTaskbarIcons"
+        ]
+    },
+    {
+        "Group": "Printers",
+        "Description": "Remove default printers (WARNING: One way operation!)",
+        "Name": "RemoveDefaultPrinters",
+        "Choices": [
+            "\u0026Skip",
+            "\u0026RemoveDefaultPrinters"
+        ]
+    }
+]
