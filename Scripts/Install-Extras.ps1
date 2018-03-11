@@ -111,12 +111,6 @@ $ChocoInstalls = @(
     'microsoft-teams'
 )
 
-# Install Windows subsystem for linux?
-$InstallWSL = $TRUE
-
-# Which WSL distro to install? Supports ubuntu, sles, and opensuse (link: https://docs.microsoft.com/en-us/windows/wsl/install-on-server). I've only tested ubuntu fully.
-$WSLDistro = 'ubuntu'
-
 # Chocolatey places a bunch of crap on the desktop after installing or updating software. This flag allows
 #  you to clean that up (Note: this will move *.lnk files from the Public user profile desktop and your own 
 #  desktop to a new directory called 'shortcuts' on your desktop. This may or may not be what you want..) 
@@ -661,53 +655,6 @@ if ($CreatePowershellProfile) {
     }
     else {
         Write-Warning "Powershell profile already exists!"
-    }
-}
-
-if ($InstallWSL) {
-    if ((Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux).State -ne 'Enabled') {
-        try {
-            Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart
-        }
-        catch {
-            Write-Warning 'Unable to install the WSL feature!'
-        }
-    }
-    else {
-        Write-Output 'Windows subsystem for Linux optional feature already installed!'
-    }
-
-    switch ($WSLDistro) {
-        'ubuntu' {
-            if (-not (Test-Path Ubuntu.zip)) {
-                Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.zip -UseBasicParsing
-                Expand-Archive Ubuntu.zip Ubuntu
-                Start-Proc -Exe (Resolve-Path 'Ubuntu\ubuntu.exe').Path -waitforexit
-            }
-            else {
-                Write-Warning 'The Ubuntu.zip file appears to already be downloaded.'
-            }
-        }
-        'SLES' {
-            if (-not (Test-Path sles.zip)) {
-                Invoke-WebRequest -Uri 'https://aka.ms/wsl-sles-12' -OutFile sles.zip -UseBasicParsing
-                Expand-Archive sles.zip sles
-                Start-Proc -Exe (Resolve-Path 'sles\sles.exe').Path -waitforexit
-            }
-            else {
-                Write-Warning 'The sles.zip file appears to already be downloaded.'
-            }
-        }
-        'OpenSUSE' {
-            if (-not (Test-Path sles.zip)) {
-                Invoke-WebRequest -Uri 'https://aka.ms/wsl-opensuse-42' -OutFile opensuse.zip -UseBasicParsing
-                Expand-Archive opensuse.zip opensuse
-                Start-Proc -Exe (Resolve-Path 'opensuse\opensuse.exe').Path -waitforexit
-            }
-            else {
-                Write-Warning 'The opensuse.zip file appears to already be downloaded.'
-            }
-        }
     }
 }
 
