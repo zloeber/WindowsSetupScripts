@@ -2,7 +2,7 @@
 .SYNOPSIS
 Installs Windows subsystem for linux (WSL) as well as downloads, starts the distro setup. Supports ubuntu, sles, and opensuse 
 .DESCRIPTION
-Installs Windows subsystem for linux (WSL) as well as downloads, starts the distro setup. Supports ubuntu, sles, and opensuse 
+Installs Windows subsystem for linux (WSL) as well as downloads, starts the distro setup. Supports ubuntu, sles, and opensuse.
 .PARAMETER InstallPath
 Path to save and install WSL distro to
 .PARAMETER Distro
@@ -14,7 +14,10 @@ Configures the WSL feature if required then attempts to install the ubuntu wsl d
 .NOTES
 Author: Zachary Loeber
 
-I've only really tested the ubuntu installer.
+- I've only really tested the ubuntu installer. This is the only distro that is currently setup to autoupdate after the initial installation.
+- The downloads are skipped if already found in the $env:temp directory. 
+- The installer process may fail without a reboot inbetween the feature install and the distro installer running.
+- Unregister or manage the default distro install via wslconfig.exe
 .LINK
 https://github.com/zloeber/WindowsSetupScripts
 .LINK
@@ -39,8 +42,8 @@ Begin {
     }
     $DistroEXE = @{
         'ubuntu' = 'ubuntu.exe'
-        'sles' = 'sles.exe'
-        'opensuse' = 'opensuse.exe'
+        'sles' = 'SLES-12.exe'
+        'opensuse' = 'openSUSE-42.exe'
     }
 
     function Start-Proc {
