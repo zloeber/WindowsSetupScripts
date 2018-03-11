@@ -22,7 +22,7 @@ Read on to see how to use some of these features.
 
 ## Scripts
 
-There are a handful of scripts make up this mini-project. One script can be used to create another script that could be used as a gist for your own boxstarter customization. Another can be used stand-alone by generating an external json config file with all appropriate settings to 
+There are a handful of scripts make up this mini-project. One script can be used to create another script that could be used as a gist for your own boxstarter customization. Another can be used stand-alone by generating an external json config file with all appropriate settings to setup a new system to suit your specific needs.
 
 *Create-Windows-Config-Script.ps1* - Creates a Windows 10 or Server 2016 Initial Setup Script to be used with boxstarter.
 
