@@ -14,20 +14,45 @@ OR the more supported method moving forward:
     . { iwr -useb http://boxstarter.org/bootstrapper.ps1 } | iex; get-boxstarter -Force
     install-boxstarterpackage -PackageName <RAW GIST URL>
 
+OR similarly (if you don't want to publish a gist):
+    . { iwr -useb http://boxstarter.org/bootstrapper.ps1 } | iex; get-boxstarter -Force
+    install-boxstarterpackage -PackageName <Path to this ps1>
+
+
 NOTES:
 
 #>
 
 # Boxstarter options
-$Boxstarter.RebootOk=$true # Allow reboots?
-$Boxstarter.NoPassword=$false # Is this a machine with no login password?
-$Boxstarter.AutoLogin=$false # Save my password securely and auto-login after a reboot
+$Boxstarter.RebootOk = $true # Allow reboots?
+$Boxstarter.NoPassword = $false # Is this a machine with no login password?
+$Boxstarter.AutoLogin = $false # Save my password securely and auto-login after a reboot
 
 # All of the configuration tasks that will be run.
 $Configuration = @'
 <%WindowsSettings%>
 '@
 
+function Read-Choice {     
+    Param(
+        [Parameter(Position = 0)]
+        [System.String]$Message, 
+    
+        [Parameter(Position = 1)]
+        [ValidateNotNullOrEmpty()]
+        [System.String[]]$Choices = @('&Yes', '&No', 'Yes to &All', 'No &to All'),
+    
+        [Parameter(Position = 2)]
+        [System.Int32]$DefaultChoice = 0, 
+    
+        [Parameter(Position = 3)]
+        [System.String]$Title = [string]::Empty 
+    )        
+    [System.Management.Automation.Host.ChoiceDescription[]]$Poss = $Choices | ForEach-Object {            
+        New-Object System.Management.Automation.Host.ChoiceDescription "$($_)", "Sets $_ as an answer."      
+    }       
+    $Host.UI.PromptForChoice( $Title, $Message, $Poss, $DefaultChoice )
+}
 # Disable Telemetry
 Function DisableTelemetry {
     Write-Host "Disabling Telemetry..."
@@ -2213,7 +2238,7 @@ catch {
 }
 
 if ($tweaks.count -gt 0) {
-    $RunTweaks = Read-Choice -Message "Continue with the execution of $($tweaks.count) system configuration tweaks?" -Choices @('&Yes','&No')
+    $RunTweaks = Read-Choice -Message "Continue with the execution of $($tweaks.count) system configuration tweaks?" -Choices @('&Yes', '&No')
 
     if ($RunTweaks -eq 0) {
         # Call the desired tweak functions

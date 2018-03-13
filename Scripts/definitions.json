@@ -226,6 +226,7 @@
         "Description": "Disable or enable controlled folder access (WARNING: Enabling can cause issues with Powershell profile path access!)",
         "Name": "ControlledFolderAccess",
         "Choices": [
+            "\u0026Skip",
             "\u0026EnableCtrldFolderAccess",
             "\u0026DisableCtrldFolderAccess"
         ]
