@@ -589,7 +589,7 @@ if ($null -ne (Get-Command 'keypirinha.exe' -ErrorAction:SilentlyContinue)) {
     Write-Output 'Found keypirinha, attempting to configure...'
     if ($null -eq (Get-Process -Name 'keypirinha-x64' -ErrorAction:SilentlyContinue)) {
         Write-Output '   Need to start KeyPirinha at least once to get the app directories created'
-        Start-Process -Name 'keypirinha.exe'
+        Start-Process -FilePath 'keypirinha.exe'
     }
     
     $keypirinhaconfig = join-path $SpecialPaths['ApplicationData'] 'Keypirinha\User\Keypirinha.ini'
@@ -597,7 +597,7 @@ if ($null -ne (Get-Command 'keypirinha.exe' -ErrorAction:SilentlyContinue)) {
         Write-Output '   No custom user keypirinha config found, creating one that binds Alt+Space to launch the app..'
         $keypirinhaconfigdata | Out-File -FilePath $keypirinhaconfig -Encoding:utf8 -Force
         Stop-Process -Name 'keypirinha-x64' -ErrorAction:SilentlyContinue
-        Start-Process -Name 'keypirinha.exe'
+        Start-Process -FilePath 'keypirinha.exe'
     }
     else {
         Write-Warning "KeyPirinha user config file already found and NOT overwritten: $keypirinhaconfig"
