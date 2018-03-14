@@ -1,25 +1,21 @@
 <#
 .SYNOPSIS
-Installs Windows subsystem for linux (WSL) as well as downloads, starts the distro setup. Supports ubuntu, sles, and opensuse 
+Installs Windows subsystem for linux (WSL) option if not already configured. Also downloads and starts the distro setup.
 .DESCRIPTION
-Installs Windows subsystem for linux (WSL) as well as downloads, starts the distro setup. Supports ubuntu, sles, and opensuse.
+Installs Windows subsystem for linux (WSL) option if not already configured. Also downloads and starts the distro setup. Supports ubuntu, sles, and opensuse.
 .PARAMETER InstallPath
-Path to save and install WSL distro to
+Path to install chosen WSL distribution
 .PARAMETER Distro
 Distro to attempt to download and install
 .EXAMPLE
 .\Install-WSL.ps1
 
-Configures the WSL feature if required then attempts to install the ubuntu wsl distrobution to C:\WSLDistros\Ubuntu
+Configures the WSL feature if required then attempts to install the ubuntu wsl distribution to C:\WSLDistros\Ubuntu
 .NOTES
 Author: Zachary Loeber
-
-- I've only really tested the ubuntu installer. This is the only distro that is currently setup to autoupdate after the initial installation.
 - The downloads are skipped if already found in the $env:temp directory. 
-- The installer process may fail without a reboot inbetween the feature install and the distro installer running.
+- The installer process may fail without a reboot between the feature install and the distro installer running.
 - Unregister or manage the default distro install via wslconfig.exe
-.LINK
-https://github.com/zloeber/WindowsSetupScripts
 .LINK
 https://docs.microsoft.com/en-us/windows/wsl/install-on-server
 #>
@@ -28,21 +24,20 @@ param(
     [Parameter(HelpMessage = 'Path to save and install WSL distro to.')]
     [string]$InstallPath = 'C:\WSLDistros\Ubuntu',
     [Parameter(HelpMessage = 'Distro to attempt to download and install')]
-    [ValidateSet('ubuntu','opensuse','sles')]
+    [ValidateSet('ubuntu', 'opensuse', 'sles')]
     [string]$Distro = 'ubuntu'
 )
 
 Begin {
     $WSLDownloadPath = Join-Path $ENV:TEMP "$Distro.zip"
-
     $DistroURI = @{
-        'ubuntu' = 'https://aka.ms/wsl-ubuntu-1604'
-        'sles' = 'https://aka.ms/wsl-sles-12'
+        'ubuntu'   = 'https://aka.ms/wsl-ubuntu-1604'
+        'sles'     = 'https://aka.ms/wsl-sles-12'
         'opensuse' = 'https://aka.ms/wsl-opensuse-42'
     }
     $DistroEXE = @{
-        'ubuntu' = 'ubuntu.exe'
-        'sles' = 'SLES-12.exe'
+        'ubuntu'   = 'ubuntu.exe'
+        'sles'     = 'SLES-12.exe'
         'opensuse' = 'openSUSE-42.exe'
     }
 
@@ -98,29 +93,15 @@ end {
         else {
             Write-Warning "The $Distro zip file appears to already be downloaded."
         }
-        
+
         Expand-Archive $WSLDownloadPath $InstallPath -Force
 
         if (Test-Path $WSLExe) {
+            Write-Output "Starting $WSLExe"
             Start-Proc -Exe $WSLExe -waitforexit
         }
         else {
             Write-Warning "  $WSLExe was not found for whatever reason"
-        }
-
-        # Run distro specific updates and such
-        switch ($Distro) {
-            'ubuntu' {
-                Write-Output 'Assuming that the install worked, attempting to run updates against it now. If prompted for a password please supply the one provided for the ubuntu install.'
-            
-                & $WSLExe run 'sudo apt-get update && sudo apt-get upgrade -y'
-            }
-            'sles' {
-                # NA
-            }
-            'opensuse' {
-                # NA
-            }
         }
     }
     else {

@@ -30,6 +30,8 @@ There are a handful of scripts make up this mini-project. One script can be used
 
 *Install-Extras.ps1* - Installs additional software from chocolatey and other sources. Also used to setup different application settings, a powershell profile, and install PowerShell modules. This is meant to be heavily customized to suit your needs and run manually after running your configuration scripts. It would not be hard to move a good deal of this to a boxstarter script as well.
 
+*Install-WSL.ps1* - Used to setup a Windows Subsystem for Linux system on a windows 10 laptop. Can automatically download and run one of three distributions, ubunut, sles, or opensuse.
+
 *Show-Config.ps1* - Use this to view all the settings in a saved config.json file in a nice readable format. This compliments the Configure-Windows.ps1 script.
 
 ## Other Information
