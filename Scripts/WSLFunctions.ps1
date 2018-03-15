@@ -141,6 +141,55 @@ Function Test-WSLFeatureInstalled {
     catch {}
 }
 
+Function Get-CanonicalPath {
+    # Used to ensure that we fix any case-sensitivity issues
+    [CmdletBinding()]
+    param (
+        [string]$Path
+    )
+    begin {
+        Function Get-RecurseCN ([string]$Path) {
+            if ( -not [string]::IsNullOrEmpty($Path) ) {
+                try {
+                    $CurrPath = Get-Item -Path $Path
+                }
+                catch {
+                    throw
+                }
+                if ($CurrPath -is [System.IO.DirectoryInfo]) {
+                    # this is a directory
+                    Write-Verbose "Processing Directory: $($CurrPath.ToString())"
+                    if ($null -ne $CurrPath.Parent) {
+                        # we are not at a root directory
+                        $ThisPath = $Currpath.Parent
+                        $ThisLeafPath = Split-Path $CurrPath.ToString() -leaf
+                        Write-Verbose "...Leaf Path: $ThisLeafPath"
+                        Get-CanonicalPath $ThisPath.FullName.ToString()
+                        return $ThisPath.GetDirectories($ThisLeafPath).Name
+                    }
+                    else {
+                        # We are at a drive or base location, return it lowercase to align with WSL mounting
+                        return $CurrPath.ToString().ToLower()
+                    }
+                }
+                elseif ($CurrPath -is [System.IO.FileInfo]) {
+                    # this is a file
+                    Write-Verbose "Processing File: $($CurrPath.ToString())"
+                    $Base = Get-Item (Get-CanonicalPath (Split-Path $CurrPath.ToString()))
+                    $LeafPath = Split-Path $CurrPath.ToString() -Leaf
+                    return $Base.GetFiles($LeafPath).FullName
+                }
+                else {
+                    # this is something else
+                    throw
+                }
+            }
+        }
+
+        ((Get-RecurseCN $Path) -join '\') -replace "\\\\",'\'
+    }
+}
+
 Function ConvertTo-WSLPath {
     <#
     .SYNOPSIS
@@ -160,19 +209,22 @@ Function ConvertTo-WSLPath {
     .LINK
     TBD
     #>
+    [CmdletBinding()]
     param(
         [Parameter()]
         [string]$Path
     )
-    try {
-        $SourcePath = Get-Item -Path $Path
+    begin {
+        try {
+            $SourcePath = Get-Item -Path $Path
+        }
+        catch {
+            throw 'Unable to find the source script path!'
+        }
+        $LinuxPath = (Get-CanonicalPath $SourcePath.toString()) -replace [regex]::Escape($SourcePath.psdrive.root), '' -replace '\\', '/'
+        
+        "/mnt/$(($SourcePath.PSDrive.Name).ToLower())/$LinuxPath"
     }
-    catch {
-        throw 'Unable to find the source script path!'
-    }
-    $LinuxPath = $SourcePath -replace [regex]::Escape($SourcePath.psdrive.root),'' -replace '\\','/'
-    $LinuxPath = "/mnt/$(($SourcePath.PSDrive.Name).ToLower())/$LinuxPath"
-    $LinuxPath
 }
 
 Function Invoke-CopyStartWSLScript {
@@ -218,9 +270,9 @@ Function Invoke-CopyStartWSLScript {
         catch {
             throw 'Unable to find the source script path!'
         }
-        $LinuxPath = $scriptpath -replace [regex]::Escape($scriptpath.psdrive.root),'' -replace '\\','/'
-        $LinuxPath = "/mnt/$(($scriptpath.PSDrive.Name).ToLower())/$LinuxPath"
-        $LinuxDestScript = (Join-Path -Path $Destination -ChildPath (Split-Path -Path $scriptpath -Leaf)) -replace '\\','/'
+        $LinuxPath = ConvertTo-WSLPath $Path
+
+        $LinuxDestScript = (Join-Path -Path $Destination -ChildPath (Split-Path -Path $scriptpath -Leaf)) -replace '\\', '/'
     }
     end {
         Invoke-WSLCommand "cp $LinuxPath $LinuxDestScript" -Distro:$Distro
@@ -276,9 +328,8 @@ Function Copy-WSLFile {
         catch {
             throw 'Unable to find the source script path!'
         }
-        $LinuxPath = $scriptpath -replace [regex]::Escape($scriptpath.psdrive.root),'' -replace '\\','/'
-        $LinuxPath = "/mnt/$(($scriptpath.PSDrive.Name).ToLower())/$LinuxPath"
-        $LinuxDestScript = (Join-Path -Path $Destination -ChildPath (Split-Path -Path $scriptpath -Leaf)) -replace '\\','/'
+        $LinuxPath = ConvertTo-WSLPath $Path
+        $LinuxDestScript = (Join-Path -Path $Destination -ChildPath (Split-Path -Path $scriptpath -Leaf)) -replace '\\', '/'
     }
     end {
         Invoke-WSLCommand "cp $LinuxPath $LinuxDestScript" -Distro:$Distro
@@ -325,7 +376,7 @@ Function Invoke-WSLCommand {
     }
     end {
         $InstalledWSLDistros = @{}
-        (Get-ChildItem 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Lxss' -ErrorAction:SilentlyContinue | ForEach-Object { Get-ItemProperty $_.pspath }) | foreach {
+        (Get-ChildItem 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Lxss' -ErrorAction:SilentlyContinue | ForEach-Object { Get-ItemProperty $_.pspath }) | ForEach-Object {
             $InstalledWSLDistros.($_.DistributionName) = $_.BasePath
         }
 
